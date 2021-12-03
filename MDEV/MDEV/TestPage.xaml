@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:buttons="clr-namespace:Syncfusion.XForms.Buttons;assembly=Syncfusion.Buttons.XForms"
+             x:Class="MDEV.TestPage"
+             NavigationPage.HasNavigationBar="False"
+             BackgroundImageSource="bg">
+    <StackLayout>
+        <Frame BackgroundColor="Black" Padding="24" CornerRadius="15" Margin="10,10,10,0" HasShadow="True">
+            <StackLayout Orientation="Horizontal">
+                <Label Text="Тестирование" HorizontalTextAlignment="Center" TextColor="White" FontSize="24" HorizontalOptions="StartAndExpand"/>
+                <Label x:Name="Rate" Text="[0 балл]" HorizontalTextAlignment="End" TextColor="White" FontSize="24" HorizontalOptions="EndAndExpand"/>
+            </StackLayout>
+            
+        </Frame>
+
+        <ScrollView>
+            <StackLayout>
+                <Frame BackgroundColor="White" Padding="24,10,24,10" CornerRadius="15" Margin="10,10,10,0" HasShadow="True">
+                    <Label x:Name="Question" Text="" HorizontalTextAlignment="Start" TextColor="Black" FontSize="18"/>
+                </Frame>
+            </StackLayout>
+        </ScrollView>
+        <StackLayout VerticalOptions="EndAndExpand" >
+            <Frame BackgroundColor="Green" Padding="24,24,24,24" CornerRadius="15" Margin="10,10,10,0" HasShadow="True" VerticalOptions="EndAndExpand" x:Name="StackAnswers">
+
+                <buttons:SfRadioGroup x:Name="Answers" Margin="10,0,10,0" HorizontalOptions="Start">
+                    <buttons:SfRadioButton x:Name="Answer_A" Text="A"
+                                       TextColor="White"
+                                       FontSize="18"/>
+                    <buttons:SfRadioButton x:Name="Answer_B" Text="B"
+                                       TextColor="White"
+                                       FontSize="18"/>
+                    <buttons:SfRadioButton x:Name="Answer_C" Text="C"
+                                       TextColor="White"
+                                       FontSize="18"/>
+                    <buttons:SfRadioButton x:Name="Answer_D" Text="D"
+                                       TextColor="White"
+                                       FontSize="18"/>
+                </buttons:SfRadioGroup>
+
+            </Frame>
+            <buttons:SfButton x:Name ="SfButton" Text="Следующий вопрос" Margin="25,10,25,25"
+                          VerticalOptions="EndAndExpand"
+                          BackgroundColor="Blue"
+                          FontSize="24"
+                          PressedBackgroundColor="Red"
+                          ShadowColor="Black"
+                          HasShadow="True"
+                          CornerRadius="15"
+                          Padding="10"
+                              Clicked="SfButton_Clicked"/>
+        </StackLayout>
+    </StackLayout>
+</ContentPage>

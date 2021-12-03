@@ -1,0 +1,69 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MDEV.MainPage"
+             BackgroundImageSource="bg"
+             xmlns:buttons="clr-namespace:Syncfusion.XForms.Buttons;assembly=Syncfusion.Buttons.XForms"
+             NavigationPage.HasNavigationBar="False">
+
+    <ScrollView>
+        <StackLayout VerticalOptions="CenterAndExpand"
+                     WidthRequest="300">
+            <ImageButton x:Name="btn_logo"
+            Source="logo"
+                     WidthRequest="150"
+                     BackgroundColor="Transparent"
+                     HeightRequest="150"
+                     Clicked="btn_logo_Clicked"/>
+            <buttons:SfButton
+            x:Name="btn_theory"
+                Text="  Лекции"
+                CornerRadius="10"
+                Margin="10,10,10,5"
+                HasShadow="True"
+                HeightRequest="75"
+                FontSize="24"
+                TextColor="Black"
+                BackgroundColor="AliceBlue"
+                ImageSource="btn_theory"
+                ShowIcon="True"
+                ImageAlignment="End"
+                ImageWidth="50"
+                HorizontalTextAlignment="Start"
+            Clicked="btn_theory_Clicked"
+            />
+            <buttons:SfButton
+                x:Name="btn_practise"
+                Text="  Практика"
+                CornerRadius="10"
+                Margin="10,5,10,5"
+                HasShadow="True"
+                HeightRequest="75"
+                FontSize="24"
+                BackgroundColor="Blue"
+                ImageSource="btn_practise"
+                ShowIcon="True"
+                ImageAlignment="End"
+                ImageWidth="50"
+                HorizontalTextAlignment="Start"
+                Clicked="btn_practise_Clicked"/>
+            <buttons:SfButton
+                x:Name="btn_test"
+                Text="  Тестирование"
+                TextColor="Black"
+                CornerRadius="10"
+                Margin="10,5,10,5"
+                HasShadow="True"
+                HeightRequest="75"
+                FontSize="24"
+                BackgroundColor="LawnGreen"
+                ImageSource="btn_test"
+                ShowIcon="True"
+                ImageAlignment="End"
+                ImageWidth="50"
+                HorizontalTextAlignment="Start"
+                Clicked="btn_test_Clicked"/>
+        </StackLayout>
+    </ScrollView>
+
+</ContentPage>

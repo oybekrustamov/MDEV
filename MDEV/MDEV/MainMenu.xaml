@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MDEV.MainMenu"
+             NavigationPage.HasNavigationBar="False"
+             BackgroundImageSource="bg"
+             xmlns:buttons="clr-namespace:Syncfusion.XForms.Buttons;assembly=Syncfusion.Buttons.XForms">
+    <ScrollView>
+        
+        <StackLayout x:Name="mainMenu">
+            <Frame BackgroundColor="Blue">
+                <Label x:Name="titleLabel"
+                    Text="asdsad"
+                       HorizontalTextAlignment="Center"
+                       TextColor="White"
+                       FontSize="18"
+                       />
+            </Frame>
+        </StackLayout>
+
+    </ScrollView>
+</ContentPage>
