@@ -6,7 +6,7 @@ namespace MDEV
     {
         public App()
         {
-            Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense("NTI3MTc3QDMxMzkyZTMzMmUzMGZrSWVidDk3Q3hsV1NBRHhYZWpiRFpIR25lSTRGekhMSmdUSHpxN252OTQ9");
+            Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense("there is your syncfusion license key!");
             InitializeComponent();
 
             MainPage = new NavigationPage(new MainPage());
