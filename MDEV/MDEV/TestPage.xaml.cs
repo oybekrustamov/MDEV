@@ -8,6 +8,7 @@ using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
 using MDEV.Model;
+using System.IO;
 
 namespace MDEV
 {
@@ -16,7 +17,6 @@ namespace MDEV
     {
         List<Test> tests;
         int[,] VariantArray;
-        int[,] AnswerArray;
 
         int step = 0;
 
@@ -114,6 +114,23 @@ namespace MDEV
             {
                 Navigation.PopToRootAsync();
             } 
+        }
+
+        string folderPath = Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData);
+        protected override bool OnBackButtonPressed()
+        {
+            try
+            {
+                StreamWriter write = new StreamWriter(folderPath+"/mdev_score");
+                write.WriteLine(Score.ToString());
+                write.Close();
+            }
+            catch(Exception ex)
+            {
+
+            }
+
+            return base.OnBackButtonPressed();
         }
     }
 }

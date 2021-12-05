@@ -7,8 +7,26 @@
              NavigationPage.HasNavigationBar="False">
 
     <ScrollView>
-        <StackLayout VerticalOptions="CenterAndExpand"
-                     WidthRequest="300">
+        
+        <StackLayout VerticalOptions="Start"
+                     >
+            <AbsoluteLayout HorizontalOptions="EndAndExpand"
+                        VerticalOptions="Start">
+                
+                <Frame BackgroundColor="Blue"
+                           CornerRadius="30"
+                           Margin="10">
+                    <Label x:Name="latest_Score"
+                           x:FieldModifier="public"
+                        Text="" FontSize="24"
+                       TextColor="White"
+                       Padding="0,0,0,0"
+                       />
+                    <Frame.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="latest_Score_Tapped"/>
+                    </Frame.GestureRecognizers>
+                </Frame>
+            </AbsoluteLayout>
             <ImageButton x:Name="btn_logo"
             Source="logo"
                      WidthRequest="150"
